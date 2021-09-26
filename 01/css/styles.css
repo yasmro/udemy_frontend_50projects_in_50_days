@@ -1,0 +1,74 @@
+.container{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.container h1{
+    text-align: center;
+}
+
+
+.panels{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease;
+}
+
+.panel::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #000;
+    opacity: 0.5;
+}
+.panel.active::after{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.panel .title{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+/* non-activeの幅:activeの幅 = 1:3にする */
+.panel.active{
+    flex: 3;
+}
+
+.panel.active .title{
+    opacity: 1;
+    /* transition: 属性 時間 アニメーションタイプ Delay */
+    transition: opacity 0.5s ease-in 0.3s;
+}
+
+/* 画像サイズが640px未満のとき，4番目と5番目の.panelを消す (display:none) */
+
+@media (max-width: 640px){
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}

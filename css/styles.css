@@ -1,0 +1,88 @@
+.container{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.progress{
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 540px;
+    
+}
+
+.progress-container{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    
+    width: 100%;
+}
+
+
+/* プログレスバーのデザイン */
+.progress-container::before, .progress-bar{
+    content: '';
+    background-color: #c0c0c0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    
+}
+
+.progress-bar{
+    background-color: #3498db;
+    width: 0;
+    /* プログレスバーのアニメーション */
+    transition: .4s ease;
+}
+
+.step{
+    background-color: #fff;
+    color: #555;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c0c0c0;
+    transition: .4s ease;
+    z-index: 1;
+}
+
+.step.active{
+    border-color: #3498db;
+}
+
+.btn{
+    background-color: #fff;
+    box-shadow: 2px 2px 4px -2px #666;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    margin: 8px;
+    transition: 0.2s;
+}
+
+.btn:hover:not(:disabled){
+    background-color: #666;
+    color: #fff;
+    box-shadow: none; 
+    transition:  0.2s;
+}
+
+.btn:disabled{
+    opacity: 0.3;
+    box-shadow: none;
+}

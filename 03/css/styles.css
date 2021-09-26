@@ -1,0 +1,152 @@
+body{
+    overflow-x: hidden;
+    background-color: #111;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+
+    /* 要素を回転・移動する時の原点を指定 --> top /left (左上） */
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    box-shadow: 10px 10px 2px #555;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.container.show-nav{
+    /* 要素を回転する */
+    transform: rotate(-20deg);
+}
+
+/* show-navクラスの付与時に.container要素に隣接しているnavタグのなかのliのtransformをリセット(X=0) */
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition: transform 0.3s;
+    transition-delay: 0.5s;
+    z-index: 10;
+}
+
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: -1;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 10px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 10px;
+    margin: 20px 0;
+    /* 左はしへ移動 */
+    transform: translateX(-100%);
+}
+
+nav ul li:hover{
+    color: yellow;
+    background-color: #000;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* 2番目 About us */
+/* nav ul li + li => 1番目のliに隣接する li = 2番目のli */
+nav ul li + li{
+    /* 階段上に */
+    margin-left: 15px;
+    /* 左はしへ移動 */
+    transform: translateX(-150%);
+}
+
+/* 3番目 Contact */
+/* nav ul li + li => 1番目のliに隣接する li の隣接するli = 3番目のli */
+nav ul li + li + li{
+    /* 階段上に */
+    margin-left: 30px;
+    /* 左はしへ移動 */
+    transform: translateX(-200%);
+}
+
+
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: #ccc;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position:relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 32px;
+    color: #fff;
+}
+
+.circle button:focus{
+    outline: none;
+}
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.content img{
+    max-width: 100%;
+}
+
+.content{
+    padding: 100px auto;
+}
+
+.content h1{
+    margin: 0;
+}
+
+.content small{
+    color: #555;
+    font-style: italic;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+}

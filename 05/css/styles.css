@@ -1,0 +1,28 @@
+.container{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.bg{
+    background: url('https://source.unsplash.com/WLUHO9A_xik/') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(10px)
+}
+
+.loading-text{
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
