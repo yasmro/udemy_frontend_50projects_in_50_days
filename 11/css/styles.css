@@ -1,0 +1,38 @@
+.container{
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.insert{
+    width: 80%;
+    margin: 20px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.card span{
+    font-size: 20px;
+}
+
+.card small{
+    position: absolute;
+    top: -24px;
+    left: 0;
+}

@@ -1,0 +1,43 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #ccc;
+    padding: 60px;
+}
+
+.card{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px 20px;
+    text-align: center;
+    /* 複数の影を前から順番にカンマ区切りで設定 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1),0 6px 6px rgba(0,0,0,0.1);
+}
+
+.joke{
+    font-size: 24px;
+    margin: 50px auto;
+}
+
+.btn{
+    background-color: #9f68e0;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline: 0;
+}
