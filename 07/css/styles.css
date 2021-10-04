@@ -7,6 +7,7 @@
 body{
     overflow-x: hidden;
 }
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -15,12 +16,15 @@ body{
     position: relative;
 }
 
+/* ここで2分割 */
 .split{
     position: absolute;
     width: 50%;
     height: 100%;
     overflow: hidden;
 }
+
+/* 左側 */
 
 .split.left{
     left: 0;
@@ -38,6 +42,7 @@ body{
 
 }
 
+/* 右側 */
 .split.right{
     right: 0;
     background: url('xbox.png');
@@ -89,6 +94,7 @@ body{
     background-color: rgba(255,255,255, 0.2);
 }
 
+/* カーソルが触れた時に50:50 --> 75:25 */
 .hover-left .left{
     width: var(--hover-width);
 }

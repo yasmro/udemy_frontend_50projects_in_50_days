@@ -1,3 +1,7 @@
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
 .container{
     width: 100vw;
     margin: 0 auto;
