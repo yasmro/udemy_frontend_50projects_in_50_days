@@ -1,10 +1,7 @@
-// MOVIE API
-// https://api.themoviedb.org/3/movie/550?api_key=157bbe18fa70750313b7e4c84c77efec
-
 const ENDPOINT = `https://api.themoviedb.org/3`
 const REQURST = `/discover/movie`
 const PARAM = `?sort_by=popularity.desc&page=1`
-const API_KEY = `157bbe18fa70750313b7e4c84c77efec`
+const API_KEY = `XXXXXXXXXXXXXXXX`
 const API_URL = `${ENDPOINT}${REQURST}${PARAM}&api_key=${API_KEY}`
 
 

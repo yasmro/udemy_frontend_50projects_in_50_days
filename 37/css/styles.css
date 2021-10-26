@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+:root{
+    --grass: #defde0;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #ffffff 0%, #f0f0f0 100%);
+    font-family: 'Noto Sans', 'NewCezannePro-B', 'SkipStd-B', 'Karla', sans-serif;
+    font-feature-settings: "palt";
+    user-select: none;
+
+}
+
+.container{
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container h1{
+    text-align: center;
+    margin: 30px 0;
+}
+
+#pokemons-container{
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pokemon-card{
+    width: 190px;
+    height: 270px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.pokemon-card:hover{
+    transform: scale(1.1);
+}
+
+.pokemon-card.flip{
+    z-index: 10;
+}
+
+.pokemon-card.flip:hover{
+    transform: scale(1);
+}
+
+.pokemon-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+.card-front{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 2rem 1rem;
+    background: linear-gradient(150deg, var(--primary-color, #ddd) 20%, #ffffff 20.3%, #ffffff 80%, #f0f0f0 80.3%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    will-change: transform;
+}
+
+.pokemon-card.flip .pokemon-card-inner{
+    transform: scale(1.5) rotateY(180deg);
+    z-index: 1;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #ddd, 0 0 10px #f0f0f0;
+}
+
+.card-back {
+    background: linear-gradient(150deg,  #ffffff 0%,  #efefef 100%);
+    color: #000;
+    transform: rotateY(180deg);
+
+}
+
+.pokemon-card.normal{
+    --primary-color: rgb(207, 201, 188);
+}
+
+.pokemon-card.fire{
+    --primary-color: rgb(195, 63, 26);
+}
+
+.pokemon-card.water{
+    --primary-color: rgb(10, 140, 183);
+}
+
+.pokemon-card.grass{
+    --primary-color: rgb(12, 113, 53);
+}
+
+.pokemon-card.bug{
+    --primary-color: rgb(191, 164, 118);
+}
+
+.pokemon-card.ground{
+    --primary-color: rgb(106, 78, 30);
+}
+
+.pokemon-card.electric{
+    --primary-color: rgb(251, 191, 70);
+}
+.pokemon-card.psychic{
+    --primary-color: rgb(205, 77, 143);
+}
+.pokemon-card.fighting{
+    --primary-color: rgb(173, 88, 65);
+}
+
+.pokemon-card.poison{
+    --primary-color: rgb(105, 23, 149);
+}
+.pokemon-card.ghost{
+    --primary-color: rgb(6, 50, 103);
+}
+.pokemon-card.dark{
+    --primary-color: rgb(65, 66, 67);
+}
+.pokemon-card.ice{
+    --primary-color: rgb(136, 177, 190);
+}
+.pokemon-card.flying{
+    --primary-color: rgb(141, 190, 207);
+}
+.pokemon-card.rock{
+    --primary-color: rgb(78, 86, 88);
+}
+.pokemon-card.dragon{
+    --primary-color: rgb(6, 75, 94);
+}
+.pokemon-card.fairy{
+    --primary-color: rgb(246, 181, 207);
+}
+
+.pokemon-card .img-container{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.pokemon-card .img-container img{
+    filter: drop-shadow(1px 1px 4px #ccc);
+}
+
+.pokemon-card .type{
+    display: flex;
+    gap: 6px;
+}
+
+.pokemon-card .type span{
+    font-weight: bold;
+    padding: 2px 6px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 0 1px #000;
+    border-radius: 2px;
+}
+
+.pokemon-card .number{
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    color: #fff;
+    font-size: 40px;
+    
+}
+
+/* .pokemon-card::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 86px 0 0;
+    border-color: rgb(183, 10, 10) transparent transparent transparent;
+} */
+
+img{
+    width: 100%;
+}

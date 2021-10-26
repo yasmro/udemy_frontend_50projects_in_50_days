@@ -1,0 +1,46 @@
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #111;
+    color: #fff;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.back-to-top{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.board{
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.square{
+    background-color: #1d1d1d;
+    box-shadow: 0 0 2px #000;
+    height: 16px;
+    width: 16px;
+    margin: 2px;
+    transition: 2s ease;
+}
+
+/* ホバー時は即時点灯 --> 2sかけて消灯 */
+.square:hover{
+    transition-duration: 0s;
+
+}

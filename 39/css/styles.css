@@ -1,0 +1,19 @@
+body{
+    -webkit-font-smoothing: antialiased;
+}
+
+.container{
+    width: 480px;
+    margin: 0 auto;
+}
+
+.background{
+    background: url('https://picsum.photos/id/83/1200/900.webp') no-repeat center center/cover;
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    z-index: -1;
+    filter: blur(20px);
+}

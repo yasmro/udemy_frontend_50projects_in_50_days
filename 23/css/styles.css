@@ -1,0 +1,76 @@
+body{
+    -webkit-font-smoothing: antialiased;
+    background-color: #2c2d50;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container h1{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.kinetic{
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+/* 2つの直角三角形をつくる */
+.kinetic::after, .kinetic::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: #fff;
+
+    animation: rotateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before{
+    transform: rotate(90deg);
+    animation: rotateB 2s linear infinite 0s;
+}
+
+@keyframes rotateA {
+    0%, 25%{
+        transform: rotate(0deg)
+    }
+
+    50%, 75%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateB {
+    0%, 25%{
+        transform: rotate(90deg)
+    }
+
+    50%, 75%{
+        transform: rotate(270deg);
+    }
+
+    100%{
+        transform: rotate(450deg);
+    }
+}
