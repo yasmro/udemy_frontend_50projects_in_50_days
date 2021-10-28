@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>50. Insect Catch Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="screen">
+            <h1>50. Insect Catch Game</h1>
+            <button class="btn" id="start-btn">Play Game</button>
+            <a class="back-to-top" href="..">Back</a>
+        </div>
+
+        <div class="screen">
+            <h1>What is your "favorite" insect?</h1>
+            <ul class="insects-list">
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Fly</p>
+                        <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly" />
+                    </button>
+                </li>
+                <li>
+                    <button class="choose-insect-btn">
+                        <p>Mosquito</p>
+                        <img src="https://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito" />
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen game-container" id="game-container">
+            <h3 id="time" class="time">Time: 00:00</h3>
+            <h3 id="score" class="score">Score: 0</h3>
+            <h5 id="message" class="message">Are you annoyed yet? You are playing an impossible game!</h5>
+
+            <!-- <div class="insect">
+                <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png" alt="">
+            </div> -->
+        </div>
+
+        
+        
+        <script src="js/script.js" async defer></script>
+    </body>
+</html>
