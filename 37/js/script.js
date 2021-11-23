@@ -1,5 +1,5 @@
 const pokemonsContainer = document.getElementById('pokemons-container')
-const NUMBER_OF_POKEMONS = 151
+const NUMBER_OF_POKEMONS = 10
 
 
 
@@ -41,6 +41,9 @@ function createPokemonCard(id, pokemon){
             </div>
             <div class="card-back">
                 ${id.toString().padStart(3, '0')}
+                ${name}
+                <p>Height: ${(pokemon.height * 0.1).toFixed(1)}m</p>
+                <p>Weight: ${(pokemon.weight * 0.1).toFixed(1)}kg</p>
             </div>
         </div>
     `
